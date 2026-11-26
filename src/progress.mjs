@@ -1,0 +1,4 @@
+export function routeNodes(map,route){if(!['junior','senior'].includes(route))throw Error('Invalid route');return map.nodes.filter(n=>n.route==='all'||n.route===route)}
+export function normalize(map,route,raw){const ids=new Set(Array.isArray(raw)?raw:[]),valid=[];for(const n of routeNodes(map,route)){if(ids.has(n.id)&&n.prerequisites.every(p=>valid.includes(p)))valid.push(n.id)}return valid}
+export function unlocked(map,route,raw,id){const done=normalize(map,route,raw),n=routeNodes(map,route).find(n=>n.id===id);return !!n&&n.prerequisites.every(p=>done.includes(p))}
+export function complete(map,route,raw,id,correct,total){const done=normalize(map,route,raw);if(!Number.isInteger(correct)||!Number.isInteger(total)||total<1||correct<0||correct>total||correct*5<total*4||!unlocked(map,route,done,id))return done;return normalize(map,route,[...done,id])}
