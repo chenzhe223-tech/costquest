@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "source": {
+    "title": "造价工程师职业能力标准",
+    "status": "征求意见稿",
+    "verified": false,
+    "note": "章节级导航依据现有资料摘要，逐条原文待复核；不是正式执业依据。"
+  },
+  "disciplines": [
+    "土木建筑",
+    "安装",
+    "交通运输",
+    "水利"
+  ],
+  "nodes": [
+    {
+      "id": "foundation",
+      "title": "职业基础",
+      "clause": "3",
+      "route": "all",
+      "prerequisites": []
+    },
+    {
+      "id": "junior-knowledge",
+      "title": "二级专业知识",
+      "clause": "4.1",
+      "route": "junior",
+      "prerequisites": [
+        "foundation"
+      ]
+    },
+    {
+      "id": "junior-basic",
+      "title": "二级基本能力",
+      "clause": "4.2",
+      "route": "junior",
+      "prerequisites": [
+        "junior-knowledge"
+      ]
+    },
+    {
+      "id": "junior-core",
+      "title": "二级核心能力",
+      "clause": "4.3",
+      "route": "junior",
+      "prerequisites": [
+        "junior-basic"
+      ]
+    },
+    {
+      "id": "junior-growth",
+      "title": "二级发展能力",
+      "clause": "4.4",
+      "route": "junior",
+      "prerequisites": [
+        "junior-core"
+      ]
+    },
+    {
+      "id": "senior-knowledge",
+      "title": "一级专业知识",
+      "clause": "5.1",
+      "route": "senior",
+      "prerequisites": [
+        "foundation"
+      ]
+    },
+    {
+      "id": "senior-basic",
+      "title": "一级基本能力",
+      "clause": "5.2",
+      "route": "senior",
+      "prerequisites": [
+        "senior-knowledge"
+      ]
+    },
+    {
+      "id": "stage-0",
+      "title": "投资决策",
+      "clause": "5.3.3",
+      "route": "senior",
+      "prerequisites": [
+        "senior-basic"
+      ]
+    },
+    {
+      "id": "stage-1",
+      "title": "设计管理",
+      "clause": "5.3.4",
+      "route": "senior",
+      "prerequisites": [
+        "stage-0"
+      ]
+    },
+    {
+      "id": "stage-2",
+      "title": "工程交易",
+      "clause": "5.3.5",
+      "route": "senior",
+      "prerequisites": [
+        "stage-1"
+      ]
+    },
+    {
+      "id": "stage-3",
+      "title": "施工及竣工",
+      "clause": "5.3.6",
+      "route": "senior",
+      "prerequisites": [
+        "stage-2"
+      ]
+    },
+    {
+      "id": "stage-4",
+      "title": "运维管理",
+      "clause": "5.3.7",
+      "route": "senior",
+      "prerequisites": [
+        "stage-3"
+      ]
+    },
+    {
+      "id": "senior-growth",
+      "title": "一级发展能力",
+      "clause": "5.4",
+      "route": "senior",
+      "prerequisites": [
+        "stage-4"
+      ]
+    }
+  ]
+}
