@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {routeNodes,normalize,unlocked,complete} from '../src/progress.mjs';
+const map=JSON.parse(readFileSync(new URL('../data/competency-map.json',import.meta.url)));
+assert.equal(routeNodes(map,'junior').length,5);
+assert.equal(routeNodes(map,'senior').length,9);
+assert.deepEqual(normalize(map,'junior',['junior-core','stage-0','unknown']),[]);
+assert.equal(unlocked(map,'junior',[],'junior-knowledge'),false);
+assert.deepEqual(complete(map,'junior',[],'foundation',3,5),[]);
+assert.deepEqual(complete(map,'junior',[],'foundation',4,5),['foundation']);
+assert.deepEqual(complete(map,'junior',['foundation'],'junior-knowledge',5,5),['foundation','junior-knowledge']);
+assert.deepEqual(complete(map,'junior',['foundation'],'senior-knowledge',5,5),['foundation']);
+assert.deepEqual(complete(map,'junior',[],'foundation',6,5),[]);
+assert.deepEqual(normalize(map,'junior',['foundation','foundation']),['foundation']);
+console.log('10 assertions passed');
