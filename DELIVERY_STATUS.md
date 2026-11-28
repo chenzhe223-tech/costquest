@@ -14,3 +14,5 @@ Next: close P0 source verification and P3 tutor gaps before claiming phase compl
 2026-11-28: P4 added a fictional change approval decision exercise, with explicit feedback and 0/1 educational score. Commit 0602eee5146e009a60509811c2886bb5f127d32f. Exact evaluation function tests 5/5; classic script syntax passed; remote content verified. Browser and deployment not tested. P0/P3 gaps remain.
 
 2026-11-28: P5 preparatory responsive CSS patch 3330715dab9494a6f8cf28b252f980d904c1d063: narrow-screen single-column grids, 44px button minimum height, fieldset overflow mitigation and keyboard focus. Five static assertions passed, scripts unchanged, remote content exact. Browser/mobile runtime and deployment remain unverified; P0–P4 gaps unchanged.
+
+2026-11-28: P3 cost variance rounding fix 9f5dc0952334e33aa246d358cd83680ac73ca79f. Six calculation assertions passed in isolated JS; remote file exact readback. Browser/build/deployment not verified. Other phase gaps unchanged.
