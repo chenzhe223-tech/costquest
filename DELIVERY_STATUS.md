@@ -16,3 +16,5 @@ Next: close P0 source verification and P3 tutor gaps before claiming phase compl
 2026-11-28: P5 preparatory responsive CSS patch 3330715dab9494a6f8cf28b252f980d904c1d063: narrow-screen single-column grids, 44px button minimum height, fieldset overflow mitigation and keyboard focus. Five static assertions passed, scripts unchanged, remote content exact. Browser/mobile runtime and deployment remain unverified; P0–P4 gaps unchanged.
 
 2026-11-28: P3 cost variance rounding fix 9f5dc0952334e33aa246d358cd83680ac73ca79f. Six calculation assertions passed in isolated JS; remote file exact readback. Browser/build/deployment not verified. Other phase gaps unchanged.
+
+2026-11-29: P4 change simulation rejects negative post-change committed cost even when reserve masks it, and rounds monetary values consistently. Commit 3f36dd5226972426fb39451a15572fc0c70e8941. Seven isolated exact-function assertions passed; remote index.html exact readback verified. Browser/build/deployment not verified. Remaining phase gaps unchanged.
