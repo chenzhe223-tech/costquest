@@ -10,3 +10,5 @@
 - P5: browser/mobile and deployment unverified.
 
 Next: close P0 source verification and P3 tutor gaps before claiming phase completion; add reproducible browser tests and expand P4 scenario evaluation. No paid services authorized. No phase is certified complete. Consultation draft is not a formal standard.
+
+2026-11-28: P4 added a fictional change approval decision exercise, with explicit feedback and 0/1 educational score. Commit 0602eee5146e009a60509811c2886bb5f127d32f. Exact evaluation function tests 5/5; classic script syntax passed; remote content verified. Browser and deployment not tested. P0/P3 gaps remain.
